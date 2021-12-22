@@ -7,3 +7,7 @@ code {
 .mw8 {
     max-width: 75rem;
 }
+p code {
+    color: #FF6300;
+    size: 0.7em;
+}
