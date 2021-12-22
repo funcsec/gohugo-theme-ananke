@@ -1,7 +1,7 @@
   <div class="mb3 pa4 mid-gray overflow-hidden">
     {{ if .Date }}
       <div class="f6">
-        {{ .Date.Format "January 2, 2006" }} - {{ .ReadingTime}} minutes read
+        {{ .Date.Format (default "January 2, 2006" .Site.Params.date_format) }} - {{ .ReadingTime}} minutes read
       </div>
     {{ end }}
     <h1 class="f3 near-black">
@@ -12,7 +12,4 @@
     <div class="nested-links f5 lh-copy nested-copy-line-height">
       {{ .Summary  }}
     </div>
-      <div class="f6">
-          {{- partial "tags.html" . -}}
-      </div>
   </div>
